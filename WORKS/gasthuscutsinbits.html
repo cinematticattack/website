@@ -1,0 +1,78 @@
+<html>
+<head>
+<link href="../CSS/ecsummer.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+.style45 {font-family: helvetica, arial; font-size: 11px; }
+</style>
+<link href="../ecsummer.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Gas Thus Cuts In Bits</title>
+</head>
+
+<body>
+
+	<script type="text/javascript">
+	
+		var Image = new Array ("../IMG/gasthus1.jpg", "../IMG/gasthus2.jpg",
+		"../IMG/gasthus3.jpg", "../IMG/gasthus4.jpg",
+		"../IMG/gasthus5.jpg");
+
+		var Image_Number = 0;
+		var Image_Length = Image.length -1;
+
+		function change_image(num) {
+
+			Image_Number = Image_Number + num;
+
+			if (Image_Number > Image_Length) {
+			    Image_Number = 0;
+		}
+
+		if (Image_Number < 0){
+		    Image_Number = Image_Length;
+
+		}
+
+		document.slideshow.src= Image [Image_Number];
+
+
+}
+
+	</script>
+
+	<table width="808" border="0" align="center" cellspacing="20">
+	  <tr>
+	    <td width="164" valign="top"><a href="../index.html"><img src="../IMG/return.png" width="20"></a></td>
+	    <td width="308"><img src="../IMG/gasthus1.jpg" width="214" height="600"></td>
+	    <td width=250><span class="principal"><strong>The Gas Thus Cuts In Bits</strong><br>
+        <br>
+        2012 — 13<br>
+<br>
+        S16mm and 16mm film, colour and b&amp;w, optical sound, 7:06mins<br>
+        <br>
+        <br>
+An ephemental film designed for self-destruction<br>
+<br>
+«To make one see the molecular intervals,<br>
+the holes in sounds and forms.» <br>
+(Gilles Deleuze, Cinema 2) <br>
+<br>
+An exploration of film's unique performativity and instability where cinema is literally derailed and subjected to stitching. </span> <br></td>
+      </tr>
+</table>
+	<a href="javascript:change_image(-1)"><img src="../IMG/back.png" width="20" height="8"></a>
+</body>
+
+</html>

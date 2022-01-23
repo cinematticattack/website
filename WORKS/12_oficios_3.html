@@ -1,0 +1,81 @@
+<html>
+<head>
+<link href="../CSS/ecsummer.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+<link href="../ecsummer.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>12 oficios para S.M. el Rey Felipe VI</title>
+</head>
+
+<body>
+
+	<script type="text/javascript">
+	
+		var Image = new Array ("../IMG/dinos1.jpg", "../IMG/dinos2.jpg", "../IMG/dinos3.jpg",  "../IMG/dinos7.jpg");
+
+		var Image_Number = 0;
+		var Image_Length = Image.length -1;
+
+		function change_image(num) {
+
+			Image_Number = Image_Number + num;
+
+			if (Image_Number > Image_Length) {
+			    Image_Number = 0;
+		}
+
+		if (Image_Number < 0){
+		    Image_Number = Image_Length;
+
+		}
+
+		document.slideshow.src= Image [Image_Number];
+
+
+}
+
+	</script>
+
+	<table width="680" align="center" cellspacing="10">
+	  <tr>
+	    <td valign="top">&nbsp;</td>
+	    <td width="624">&nbsp;</td>
+      </tr>
+	  <tr>
+	    <td width="20" height="285" valign="top"><a href="12_oficios.html"><img src="../IMG/return.png" width="20"></a></td>
+	    <td rowspan="3" align="left" valign="top"><p><img src="../IMG/12_oficios_03.jpg" width="636" height="900" alt=""/><br>
+          <br>
+        </p></td>
+      </tr>
+	  <tr>
+	    <td height="282" valign="top">&nbsp;</td>
+      </tr>
+	  <tr>
+	    <td height="152" valign="top">&nbsp;</td>
+      </tr>
+</table>
+	<table>
+		<tr>
+		  <td align="left"></td>
+		  <td align="right"></td>
+
+	  </tr>
+</table>
+
+
+</body>
+
+</html>

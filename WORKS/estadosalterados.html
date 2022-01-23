@@ -1,0 +1,80 @@
+<html>
+<head>
+<link href="../CSS/ecsummer.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+<link href="../ecsummer.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Estados alterados</title>
+</head>
+
+<body>
+
+	<script type="text/javascript">
+	
+		var Image = new Array ("../IMG/EA2.jpg", "../IMG/EA1.jpg");
+
+		var Image_Number = 0;
+		var Image_Length = Image.length -1;
+
+		function change_image(num) {
+
+			Image_Number = Image_Number + num;
+
+			if (Image_Number > Image_Length) {
+			    Image_Number = 0;
+		}
+
+		if (Image_Number < 0){
+		    Image_Number = Image_Length;
+
+		}
+
+		document.slideshow.src= Image [Image_Number];
+
+
+}
+
+	</script>
+
+	<table width="1058" border="0" align="center" cellspacing="10">
+	  <tr>
+	    <td valign="top">&nbsp;</td>
+	    <td>&nbsp;</td>
+	    <td valign="bottom"></td>
+      </tr>
+	  <tr>
+	    <td width="20" valign="top"><a href="../index.html"><img src="../IMG/return.png" width="20"></a></td>
+	    <td width="800"><img src="../IMG/EA2.jpg" width="800" height="536"></td>
+	    <td width= 192 align="left" valign="top"><span class="principal"><strong>Estados alterados</strong><br>
+        <br>
+        2016<br>
+        <br>
+Installation<br>
+<br>
+Wood, 100 x 125 cm plexiglass sheets, 16mm film strips <br>
+<br>
+See also: <a href="thegasworks.html">The Gas Works </a><br>
+	    </span><br></td>
+      </tr>
+	  <tr>
+	    <td height="203" align></td>
+	    <td align="right" valign="top" class="obras"><a href="../IMG/EA1.jpg"><img src="../IMG/EA1.jpg" width="300" height="201"></a></td>
+	    <td align="center">&nbsp;</td>
+      </tr>
+</table>
+</body>
+
+</html>

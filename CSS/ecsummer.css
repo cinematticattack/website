@@ -1,0 +1,317 @@
+@charset "UTF-8";
+
+.negro {
+	font-family: times "Times New Roman", Times, serif;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-variant:normal;
+	font-style:italic;
+	color: #000;
+}
+
+.negro a:link {
+	font-family: times "Times New Roman", Times, serif;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-variant: normal;
+	font-style:italic;
+	color: #000;
+}
+.negro a:visited {
+	font-family: times "Times New Roman", Times, serif;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-variant: normal;
+	font-style:italic;
+	color: #000;
+}
+.negro a:hover {
+	font-family: times "Times New Roman", Times, serif;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-variant: normal;
+	font-style:italic;
+	color: #669999;
+}
+.negro a:active {
+	font-family: times "Times New Roman", Times, serif;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-variant: normal;
+	font-style:italic;
+	color: #000;
+}
+
+.textos {
+	font-family: arial;
+	font-size: 15px;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000;
+}
+
+.textos a:link {
+	font-family: arial;
+	font-size: 15px;
+	color: #000;
+}
+.textos a:visited {
+	font-family: arial;
+	font-size: 15px;
+	color: #000;
+}
+.textos a:hover {
+	font-family: arial;
+	font-size: 15px;
+	color: #669999;
+}
+.textos a:active {
+	font-family: arial;
+	font-size: 15px;
+	color: #000;
+}
+
+
+.gris {
+	font-family: arial;
+	font-size: 9px;
+	letter-spacing: 1px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #666;
+}
+
+.gris a:link {
+	font-family: arial;
+	font-size: 9px;
+	letter-spacing: 1px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #666;
+}
+.gris a:visited {
+	font-family: arial;
+	font-size: 9px;
+	letter-spacing: 1px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #666;
+}
+.gris a:hover {
+	font-family: arial;
+	font-size: 9px;
+	letter-spacing: 1px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #669999;
+}
+.gris a:active {
+	font-family: arial;
+	font-size: 9px;
+	letter-spacing: 1px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #666;
+}
+
+.gris2 {
+	font-family: arial;
+	font-size: 10px;
+	letter-spacing: 0.5px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #333;
+}
+
+.gris2 a:link {
+	font-family: arial;
+	font-size: 10px;
+	letter-spacing: 0.5px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #333;
+}
+.gris2 a:visited {
+	font-family: arial;
+	font-size: 10px;
+	letter-spacing: 0.5px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #333;
+}
+.gris2 a:hover {
+	font-family: arial;
+	font-size: 10px;
+	letter-spacing: 0.5px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #669999;
+}
+.gris2 a:active {
+	font-family: arial;
+	font-size: 10px;
+	letter-spacing: 0.5px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #333;
+}
+
+.obras {
+	font-family: arial;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000;
+}
+
+.obras a:link {
+	font-family: arial;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000;
+}
+.obras a:visited {
+	font-family: arial;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000;
+}
+.obras a:hover {
+	font-family: arial;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #669999;
+}
+.obras a:active {
+	font-family: arial;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000;
+}
+
+
+.once {
+	font-family: arial;
+	font-size: 11px;
+	letter-spacing: 1px;
+	color: #000;
+}
+
+.once a:link {
+	font-family: arial;
+	font-size: 11px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	color: #000;
+	
+}
+
+.once a:visited {
+	font-family: arial;
+	font-size: 11px;
+	letter-spacing: 1px;
+	color: #000;
+	
+}
+
+.once a:hover {
+	font-family: arial;
+	font-size: 11px;
+	letter-spacing: 1px;
+	color: #669999;
+}
+
+.once a:active {
+	font-family: arial;
+	font-size: 11px;
+	letter-spacing: 1px;
+	color: #000;
+	
+}
+
+.window {
+	font-family: times;
+	font-size: 80px;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000;
+}
+
+.onceW {
+	font-family: arial;
+	font-size: 11px;
+	letter-spacing: 1px;
+	color: #FFF;
+}
+
+.onceW a:link {
+	font-family: arial;
+	font-size: 11px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	color: #FFF;
+	
+}
+
+.onceW a:visited {
+	font-family: arial;
+	font-size: 11px;
+	letter-spacing: 1px;
+	color: #FFF;
+	
+}
+
+.onceW a:hover {
+	font-family: arial;
+	font-size: 11px;
+	letter-spacing: 1px;
+	color: #FFF;
+}
+
+.onceW a:active {
+	font-family: arial;
+	font-size: 11px;
+	letter-spacing: 1px;
+	color: #FFF;
+	
+}
+
+
+
+
+
+	
+
+
+
+
+

@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+.obrasfantasma {
+	font-family: Garamond;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-weight: lighter;
+	color: #000;
+}
+
+.principal {
+	font-family: Garamond;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-weight: lighter;
+	color: #000;
+}
+
+.principal a:link {
+	font-family: Garamond;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-weight: lighter;
+	color: #000;
+}
+.principal a:visited {
+	font-family: Garamond;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-weight: lighter;
+	color: #000;
+}
+.principal a:hover {
+	font-family: Garamond;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-weight: lighter;
+	color: #669999;
+}
+.principal a:active {
+	font-family: Garamond;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-weight: lighter;
+	color: #000;
+}
+
+
+.principalnegrita {
+	font-family: Garamond;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-weight: bold;
+	color: #000;
+}
+
+.principalnegrita a:link {
+	font-family: Garamond;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-weight: bold;
+	color: #000;
+}
+.principalnegrita a:visited {
+	font-family: Garamond;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-weight: bold;
+	color: #000;
+}
+.principalnegrita a:hover {
+	font-family: Garamond;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-weight: bold;
+	color: #669999;
+}
+.principalnegrita a:active {
+	font-family: Garamond;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	font-weight: bold;
+	color: #000;
+}
+
+.titulos {
+	font-family: times "Times New Roman", Times;
+	font-size: 16px;
+	letter-spacing: 2px;
+	font-weight: 300;
+	font-variant:normal;
+	font-style:italic; 
+	color: #000;
+}
+
+.titulos a:link {
+	font-family: times "Times New Roman", Times;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-variant: normal;
+	font-style:italic;
+	color: #000;
+}
+
+.titulos a:visited {
+	font-family: times "Times New Roman", Times;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-variant: normal;
+	font-style:italic;
+	color: #000;
+}
+
+.titulos a:hover {
+	font-family: times "Times New Roman", Times;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-variant: normal;
+	font-style:italic;
+	color: #669999;
+}
+
+.titulos a:active {
+	font-family: times "Times New Roman", Times;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-variant: normal;
+	font-style:italic;
+	color: #000;
+}
+
+.textos {
+	font-family: arial;
+	font-size: 15px;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000;
+}
+
+.textos a:link {
+	font-family: arial;
+	font-size: 15px;
+	color: #000;
+}
+.textos a:visited {
+	font-family: arial;
+	font-size: 15px;
+	color: #000;
+}
+.textos a:hover {
+	font-family: arial;
+	font-size: 15px;
+	color: #669999;
+}
+.textos a:active {
+	font-family: arial;
+	font-size: 15px;
+	color: #000;
+}
+
+	
+
+
+
+
+
