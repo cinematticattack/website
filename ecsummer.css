@@ -1,15 +1,7 @@
 @charset "UTF-8";
 
-.obrasfantasma {
-	font-family: Garamond;
-	font-size: 12px;
-	letter-spacing: 0.5px;
-	font-weight: lighter;
-	color: #000;
-}
-
 .principal {
-	font-family: Garamond;
+	font-family: arial;
 	font-size: 12px;
 	letter-spacing: 0.5px;
 	font-weight: lighter;
@@ -17,37 +9,36 @@
 }
 
 .principal a:link {
-	font-family: Garamond;
+	font-family: arial;
 	font-size: 12px;
 	letter-spacing: 0.5px;
 	font-weight: lighter;
 	color: #000;
 }
 .principal a:visited {
-	font-family: Garamond;
+	font-family: arial;
 	font-size: 12px;
 	letter-spacing: 0.5px;
 	font-weight: lighter;
 	color: #000;
 }
 .principal a:hover {
-	font-family: Garamond;
+	font-family: arial;
 	font-size: 12px;
 	letter-spacing: 0.5px;
 	font-weight: lighter;
 	color: #669999;
 }
 .principal a:active {
-	font-family: Garamond;
+	font-family: arial;
 	font-size: 12px;
 	letter-spacing: 0.5px;
 	font-weight: lighter;
 	color: #000;
 }
 
-
 .principalnegrita {
-	font-family: Garamond;
+	font-family: arial;
 	font-size: 12px;
 	letter-spacing: 0.5px;
 	font-weight: bold;
@@ -55,116 +46,243 @@
 }
 
 .principalnegrita a:link {
-	font-family: Garamond;
+	font-family: arial;
 	font-size: 12px;
 	letter-spacing: 0.5px;
 	font-weight: bold;
 	color: #000;
 }
 .principalnegrita a:visited {
-	font-family: Garamond;
+	font-family: arial;
 	font-size: 12px;
 	letter-spacing: 0.5px;
 	font-weight: bold;
 	color: #000;
 }
 .principalnegrita a:hover {
-	font-family: Garamond;
+	font-family: arial;
 	font-size: 12px;
 	letter-spacing: 0.5px;
 	font-weight: bold;
 	color: #669999;
 }
 .principalnegrita a:active {
-	font-family: Garamond;
+	font-family: arial;
 	font-size: 12px;
 	letter-spacing: 0.5px;
 	font-weight: bold;
 	color: #000;
 }
 
-.titulos {
-	font-family: times "Times New Roman", Times;
-	font-size: 16px;
-	letter-spacing: 2px;
-	font-weight: 300;
-	font-variant:normal;
-	font-style:italic; 
-	color: #000;
+/* MEJORAS RESPONSIVE */
+
+/* Imágenes responsive - se adaptan al contenedor */
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
 }
 
-.titulos a:link {
-	font-family: times "Times New Roman", Times;
-	font-size: 16px;
-	letter-spacing: 1px;
-	font-weight: normal;
-	font-variant: normal;
-	font-style:italic;
-	color: #000;
+/* Específico para el botón de retorno - mantener tamaño fijo */
+img[src*="return.png"] {
+    width: 20px !important;
+    height: auto !important;
+    max-width: 20px !important;
+    min-width: 20px !important;
 }
 
-.titulos a:visited {
-	font-family: times "Times New Roman", Times;
-	font-size: 16px;
-	letter-spacing: 1px;
-	font-weight: normal;
-	font-variant: normal;
-	font-style:italic;
-	color: #000;
+/* Específico para la imagen principal del index */
+img[src="IMG/NLDM_3.jpg"] {
+    max-width: 100%;
+    height: auto;
+    width: auto;
 }
 
-.titulos a:hover {
-	font-family: times "Times New Roman", Times;
-	font-size: 16px;
-	letter-spacing: 1px;
-	font-weight: normal;
-	font-variant: normal;
-	font-style:italic;
-	color: #669999;
+/* Para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    /* Mantener la estructura de tabla pero hacer las celdas más flexibles */
+    table {
+        width: 100% !important;
+    }
+    
+    /* Hacer que las celdas se apilen verticalmente pero manteniendo su contenido separado */
+    tr {
+        display: block;
+        width: 100%;
+    }
+    
+    td {
+        display: block;
+        width: 100% !important;
+        margin-bottom: 15px;
+        padding: 10px;
+        border-bottom: 1px solid #eee; /* Separador visual opcional */
+    }
+    
+    /* La primera celda (imagen en index) mantiene su contenido centrado */
+    td:first-child {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    /* La imagen principal del index en móvil */
+    img[src="IMG/NLDM_3.jpg"] {
+        width: 100%;
+        max-width: 400px; /* Límite máximo para móvil */
+        margin: 0 auto;
+    }
+    
+    /* Para páginas de trabajos - galería de imágenes responsive */
+    img[src*="MAKINO_TRAGAME"], 
+    img[src*="Still"],
+    img[src*="maquinaciones"],
+    td[width="800"] img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    /* Botón de retorno más visible en móvil */
+    img[src*="return.png"] {
+        width: 25px !important;
+        height: auto !important;
+        max-width: 25px !important;
+        min-width: 25px !important;
+        margin-bottom: 20px;
+    }
+    
+    /* Ajustar tamaño de fuente para móvil */
+    .principal {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    .principalnegrita {
+        font-size: 14px;
+        line-height: 1.4;
+    }
 }
 
-.titulos a:active {
-	font-family: times "Times New Roman", Times;
-	font-size: 16px;
-	letter-spacing: 1px;
-	font-weight: normal;
-	font-variant: normal;
-	font-style:italic;
-	color: #000;
+/* Para tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    table {
+        width: 95% !important;
+    }
+    
+    /* Limitar el ancho máximo de las imágenes en tablets */
+    img[src="IMG/NLDM_3.jpg"] {
+        max-width: 600px;
+    }
+    
+    /* Para páginas de trabajos en tablet */
+    img[src*="MAKINO_TRAGAME"], 
+    img[src*="Still"],
+    img[src*="maquinaciones"],
+    td[width="800"] img {
+        max-width: 700px;
+        width: 100%;
+        height: auto;
+    }
 }
 
-.textos {
-	font-family: arial;
-	font-size: 15px;
-	font-weight: normal;
-	font-variant: normal;
-	color: #000;
+/* Para pantallas grandes - mantener el diseño original */
+@media screen and (min-width: 1025px) {
+    /* En desktop, mantener la estructura de tabla original */
+    table {
+        width: 102% !important; /* Tu ancho original para index */
+        table-layout: auto;
+    }
+    
+    /* Para páginas de trabajos, usar el ancho específico */
+    table[width="1343"] {
+        width: 1343px !important;
+    }
+    
+    table[width="1098"] {
+        width: 1098px !important;
+    }
+    
+    /* La imagen principal del index mantiene su tamaño original */
+    img[src="IMG/NLDM_3.jpg"] {
+        max-width: 800px; /* Tamaño original */
+        width: 800px; /* Forzar el ancho original en desktop */
+        height: auto; /* Mantener proporción */
+    }
+    
+    /* Las imágenes de las páginas de trabajos mantienen su tamaño original */
+    img[src*="MAKINO_TRAGAME"], 
+    img[src*="Still"] {
+        max-width: 900px;
+        width: 900px;
+        height: auto;
+    }
+    
+    /* Para la página de maquinaciones y otras similares */
+    img[src*="maquinaciones"],
+    td[width="800"] img {
+        max-width: 800px;
+        width: 800px;
+        height: auto;
+    }
+    
+    /* Asegurar que las celdas mantengan su comportamiento original */
+    td {
+        display: table-cell !important;
+        vertical-align: top;
+    }
 }
 
-.textos a:link {
-	font-family: arial;
-	font-size: 15px;
-	color: #000;
-}
-.textos a:visited {
-	font-family: arial;
-	font-size: 15px;
-	color: #000;
-}
-.textos a:hover {
-	font-family: arial;
-	font-size: 15px;
-	color: #669999;
-}
-.textos a:active {
-	font-family: arial;
-	font-size: 15px;
-	color: #000;
+/* Mejoras generales para todos los dispositivos */
+body {
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-	
+/* Asegurar que todo el contenido sea responsive */
+* {
+    box-sizing: border-box;
+}
 
+/* Mobile first - tus estilos originales */
+.columna {
+    width: 100%;
+}
 
+/* Tablet */
+@media (min-width: 768px) {
+    .columna {
+        width: 50%;
+    }
+}
 
+/* Desktop */
+@media (min-width: 1024px) {
+    .columna {
+        width: 33.33%;
+    }
+}
 
+.columnas-iguales {
+    table-layout: fixed;
+    width: 100%;
+}
 
+.columnas-iguales td {
+    width: 50%;
+}
+
+.imagen-ancho-fijo {
+    width: 800px !important;  /* o el ancho que quieras */
+    height: auto !important;
+}
+
+.zoom-hover {
+  transition: transform 0.3s ease;
+}
+
+.zoom-hover:hover {
+  transform: scale(1.1); /* se agranda 10% */
+  cursor: pointer;
+}
