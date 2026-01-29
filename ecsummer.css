@@ -1,58 +1,37 @@
 @charset "UTF-8";
 
-/* =================================================
-   ESTILOS BASE - TIPOGRAFÍA
-   ================================================= */
-
-.principal {
-	font-family: arial;
-	font-size: 12px;
-	letter-spacing: 0.5px;
-	font-weight: lighter;
-	color: #000;
+/* --- ESTILOS BASE --- */
+.principal, .paginas {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #000;
+    font-weight: lighter;
 }
 
-.principal a:link, .principal a:visited, .principal a:active {
-	font-family: arial;
-	font-size: 12px;
-	letter-spacing: 0.5px;
-	font-weight: lighter;
-	color: #000;
-	text-decoration: none;
+/* --- REGLA PARA NEGRITAS --- */
+strong, .negrita {
+    font-weight: bold !important;
 }
 
+/* --- REGLAS PARA EL INDEX (Clase .principal) --- */
+.principal a:link, .principal a:visited {
+    color: #000 !important;
+    text-decoration: none;
+}
 .principal a:hover {
-	font-family: arial;
-	font-size: 12px;
-	letter-spacing: 0.5px;
-	font-weight: lighter;
-	color: #669999;
+    color: #669999 !important;
 }
 
-.principalnegrita {
-	font-family: arial;
-	font-size: 12px;
-	letter-spacing: 0.5px;
-	font-weight: bold;
-	color: #000;
+/* --- REGLAS PARA PÁGINAS DE OBRAS (Clase .paginas) --- */
+.paginas a:link, .paginas a:visited {
+    color: #669999 !important; /* Aquí activamos el color para Dissipation Essays */
+    text-decoration: none;
+}
+.paginas a:hover {
+    color: #000 !important;
 }
 
-.principalnegrita a:link, .principalnegrita a:visited, .principalnegrita a:active {
-	font-family: arial;
-	font-size: 12px;
-	letter-spacing: 0.5px;
-	font-weight: bold;
-	color: #000;
-	text-decoration: none;
-}
-
-.principalnegrita a:hover {
-	font-family: arial;
-	font-size: 12px;
-	letter-spacing: 0.5px;
-	font-weight: bold;
-	color: #669999;
-}
 
 /* =================================================
    ESTILOS BASE - LAYOUT
@@ -240,6 +219,8 @@ img[src="IMG/NLDM_3.jpg"] {
     }
 }
 
+
+
 /* =================================================
    UTILIDADES Y EFECTOS
    ================================================= */
@@ -258,7 +239,7 @@ img[src="IMG/NLDM_3.jpg"] {
 }
 
 .zoom-hover:hover {
-    transform: scale(1.1);
+    transform: scale(2.0);
     cursor: pointer;
 }
 
