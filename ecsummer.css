@@ -242,6 +242,8 @@ img[src="IMG/NLDM_3.jpg"] {
     transform: scale(2.0);
     cursor: pointer;
 }
+ 
+
 
 /* =================================================
    CLASES AUXILIARES
@@ -261,4 +263,48 @@ img[src="IMG/NLDM_3.jpg"] {
     .columna {
         width: 33.33%;
     }
+	
+	
+/* =========================
+   MOBILE: secciones colapsables
+   ========================= */
+
+details.section summary {
+  cursor: pointer;
+  list-style: none;
 }
+
+/* Quitar el triangulito por defecto */
+details.section summary::-webkit-details-marker {
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  table.principal {
+    display: block;
+    width: 100%;
+  }
+
+  table.principal tr,
+  table.principal td {
+    display: block;
+    width: 100% !important;
+  }
+
+  details.section {
+    margin-bottom: 2em;
+  }
+}
+
+/* DESKTOP: forzar todo abierto */
+@media (min-width: 769px) {
+  details.section {
+  }
+
+  details.section:not([open]) {
+    open: true;
+  }
+}
+
