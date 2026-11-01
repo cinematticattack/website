@@ -123,106 +123,53 @@ img[src="IMG/NLDM_3.jpg"] {
    ================================================= */
 
 @media screen and (max-width: 768px) {
-    /* Estructura de tabla responsive */
     table {
         width: 100% !important;
+        height: auto !important; /* Evita estiramientos raros */
+        margin-bottom: 0 !important;
     }
     
-    tr {
-        display: block;
-        width: 100%;
-    }
-    
-    td {
+    tr, td {
         display: block !important;
         width: 100% !important;
-        margin-bottom: 15px;
-        padding: 10px 8px;
-        height: auto !important; /* Eliminar alturas fijas */
-    }
-    
-    /* Celdas vacías - ocultar */
-    td:empty, td[height]:empty {
-        display: none !important;
-    }
-    
-    /* Primera celda (botón retorno) */
-    td:first-child {
-        text-align: left;
+        height: auto !important;
         margin-bottom: 10px;
         padding: 5px 8px;
     }
     
-    /* Imagen principal del index en móvil */
-    img[src="IMG/NLDM_3.jpg"] {
-        width: 100% !important;
-        max-width: 400px !important;
-        margin: 0 auto;
-        display: block;
+    /* Ocultar celdas realmente vacías */
+    td:empty {
+        display: none !important;
     }
     
-    /* TODAS las imágenes de obras en móvil - 100% ancho */
-    .tabla-obra td img:not([src*="return.png"]):not([src="IMG/NLDM_3.jpg"]) {
+    /* Ajuste de imágenes en móvil */
+    .tabla-obra td img:not([src*="return.png"]) {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
-        margin-bottom: 15px;
         display: block;
-    }
-    
-    /* Botón de retorno más visible en móvil */
-    img[src*="return.png"] {
-        width: 25px !important;
-        height: auto !important;
-        max-width: 25px !important;
-        min-width: 25px !important;
-    }
-    
-    /* Tipografía en móvil */
-    .principal, .principalnegrita {
-        font-size: 14px;
-        line-height: 1.4;
-    }
-    
-    /* Espaciado mejorado para texto */
-    td.principal, td[class="principal"] {
-        padding: 12px 8px;
-        margin-bottom: 15px;
+        margin: 0 auto;
     }
 }
 
 /* =================================================
-   DESKTOP GRANDE (1025px+)
+   DESKTOP (1025px+)
    ================================================= */
 
 @media screen and (min-width: 1025px) {
-    /* Mantener estructura de tabla original */
     table {
         table-layout: auto;
+        width: auto; /* Permite que la tabla respire */
     }
     
     td {
         display: table-cell !important;
         vertical-align: top;
     }
-    
-    /* Tablas con anchos específicos */
-    table[width="1343"] { width: 1343px !important; }
-    table[width="1098"] { width: 1098px !important; }
-    table[width="1278"] { width: 1278px !important; }
-    table[width="1007"] { width: 1007px !important; }
-    
-    /* Si no hay ancho específico, usar máximo */
-    .tabla-obra {
-        max-width: 1200px;
-        width: auto;
-    }
-}
-
-
+} /* Cerramos bloque desktop */
 
 /* =================================================
-   UTILIDADES Y EFECTOS
+   UTILIDADES
    ================================================= */
 
 .columnas-iguales {
@@ -230,81 +177,105 @@ img[src="IMG/NLDM_3.jpg"] {
     table-layout: fixed;
 }
 
-.columnas-iguales td {
-    width: 50%;
-}
-
-.zoom-hover {
-    transition: transform 0.3s ease;
-}
-
-.zoom-hover:hover {
-    transform: scale(2.0);
-    cursor: pointer;
-}
- 
-
-
 /* =================================================
-   CLASES AUXILIARES
+   INDEX: ETC. que despliega SEMINARS & WORKSHOPS y TALKS
    ================================================= */
 
-.columna {
-    width: 100%;
+#indice .mas {
+    display: none;
+}
+#indice .mas.abierto {
+    display: block;
 }
 
-@media (min-width: 768px) {
-    .columna {
-        width: 50%;
+/* =================================================
+   INDEX EN ORDENADOR: tres columnas de datos del mismo ancho
+   y algo más de aire entre ellas
+   ================================================= */
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+    #indice {
+        border-spacing: 22px 20px;
+    }
+    #indice tr > td:nth-child(4),
+    #indice tr > td:nth-child(5),
+    #indice tr > td:nth-child(6) {
+        width: 150px;
+        min-width: 150px;
     }
 }
 
-@media (min-width: 1024px) {
-    .columna {
-        width: 33.33%;
+@media screen and (min-width: 1200px) {
+    #indice {
+        border-spacing: 34px 20px;
     }
-	
-	
-/* =========================
-   MOBILE: secciones colapsables
-   ========================= */
-
-details.section summary {
-  cursor: pointer;
-  list-style: none;
+    #indice tr > td:nth-child(4),
+    #indice tr > td:nth-child(5),
+    #indice tr > td:nth-child(6) {
+        width: 185px;
+        min-width: 185px;
+    }
 }
 
-/* Quitar el triangulito por defecto */
-details.section summary::-webkit-details-marker {
-  display: none;
+/* =================================================
+   INDEX EN MÓVIL: imagen, CONTACT/BIO y dos columnas
+   (izquierda: SHOWS — derecha: SELECTED WORKS y,
+   debajo, EDITIONS, BOOKS, WRITING…)
+   ================================================= */
+
+@media screen and (max-width: 768px) {
+    #indice tr {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 14px;
+        align-items: start;
+    }
+
+    #indice tr > td {
+        width: auto !important;
+        padding: 0 !important;
+        margin: 0 0 10px 0 !important;
+    }
+
+    /* Celdas separadoras, fuera */
+    #indice tr > td:nth-child(3),
+    #indice tr > td:nth-child(7) {
+        display: none !important;
+    }
+
+    /* Imagen y CONTACT/BIO a todo el ancho */
+    #indice tr > td:nth-child(1) { grid-column: 1 / -1; grid-row: 1; }
+    #indice tr > td:nth-child(2) { grid-column: 1 / -1; grid-row: 2; margin-bottom: 16px !important; }
+
+    #indice img[src="IMG/LE7.jpg"] {
+        width: 100% !important;
+        height: auto !important;
+        display: block;
+    }
+
+    /* SHOWS a la izquierda; a la derecha SELECTED WORKS y debajo la tercera columna */
+    #indice tr > td:nth-child(4) { grid-column: 1; grid-row: 3 / span 2; }
+    #indice tr > td:nth-child(5) { grid-column: 2; grid-row: 3; margin-bottom: 28px !important; }
+    #indice tr > td:nth-child(6) { grid-column: 2; grid-row: 4; }
+
+    /* Mismo tamaño de letra para todo */
+    #indice tr > td:nth-child(2),
+    #indice tr > td:nth-child(4),
+    #indice tr > td:nth-child(5),
+    #indice tr > td:nth-child(6) {
+        font-size: 10px;
+        letter-spacing: 0.2px;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+    }
+    #indice tr > td * {
+        font-size: inherit !important;
+        line-height: inherit !important;
+    }
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-
-  table.principal {
-    display: block;
-    width: 100%;
-  }
-
-  table.principal tr,
-  table.principal td {
-    display: block;
-    width: 100% !important;
-  }
-
-  details.section {
-    margin-bottom: 2em;
-  }
+/* Evita que el iPhone agrande el texto por su cuenta en algunos bloques */
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
-
-/* DESKTOP: forzar todo abierto */
-@media (min-width: 769px) {
-  details.section {
-  }
-
-  details.section:not([open]) {
-    open: true;
-  }
-}
-
