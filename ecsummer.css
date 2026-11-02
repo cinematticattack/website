@@ -20,12 +20,12 @@ strong, .negrita {
     text-decoration: none;
 }
 .principal a:hover {
-    color: #669999 !important;
+    color: #4f7a7a !important;
 }
 
 /* --- REGLAS PARA PÁGINAS DE OBRAS (Clase .paginas) --- */
 .paginas a:link, .paginas a:visited {
-    color: #669999 !important; /* Aquí activamos el color para Dissipation Essays */
+    color: #4f7a7a !important; /* verde de los enlaces (algo más oscuro para el fondo de papel) */
     text-decoration: none;
 }
 .paginas a:hover {
@@ -36,6 +36,17 @@ strong, .negrita {
 /* =================================================
    ESTILOS BASE - LAYOUT
    ================================================= */
+
+/* Fondo de papel: hueso grisáceo con grano */
+html, body {
+    background-color: #f1f0ec;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27240%27%20height%3D%27240%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.8%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20type%3D%27saturate%27%20values%3D%270%27/%3E%3CfeComponentTransfer%3E%3CfeFuncA%20type%3D%27table%27%20tableValues%3D%270%200.2%27/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23n%29%27/%3E%3C/svg%3E");
+}
+
+/* La flecha de volver tiene fondo blanco: que tome el color del papel */
+img[src*="return.png"] {
+    mix-blend-mode: multiply;
+}
 
 body {
     margin: 0;
@@ -227,6 +238,7 @@ img[src="IMG/NLDM_3.jpg"] {
     #indice tr {
         display: grid !important;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto 1fr;   /* la fila de WORKS se ajusta a su contenido */
         column-gap: 14px;
         align-items: start;
     }
@@ -247,7 +259,8 @@ img[src="IMG/NLDM_3.jpg"] {
     #indice tr > td:nth-child(1) { grid-column: 1 / -1; grid-row: 1; }
     #indice tr > td:nth-child(2) { grid-column: 1 / -1; grid-row: 2; margin-bottom: 16px !important; }
 
-    #indice img[src="IMG/LE7.jpg"] {
+    #indice tr > td:nth-child(1) img,
+    #indice tr > td:nth-child(1) video {
         width: 100% !important;
         height: auto !important;
         display: block;
@@ -255,7 +268,7 @@ img[src="IMG/NLDM_3.jpg"] {
 
     /* SHOWS a la izquierda; a la derecha SELECTED WORKS y debajo la tercera columna */
     #indice tr > td:nth-child(4) { grid-column: 1; grid-row: 3 / span 2; }
-    #indice tr > td:nth-child(5) { grid-column: 2; grid-row: 3; margin-bottom: 28px !important; }
+    #indice tr > td:nth-child(5) { grid-column: 2; grid-row: 3; margin-bottom: 24px !important; }
     #indice tr > td:nth-child(6) { grid-column: 2; grid-row: 4; }
 
     /* Mismo tamaño de letra para todo */
@@ -278,4 +291,147 @@ img[src="IMG/NLDM_3.jpg"] {
 html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+}
+
+/* =================================================
+   PIES DE FOTO (bio y, más adelante, páginas de obras)
+   ================================================= */
+
+.pie {
+    margin-top: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    .pie {
+        margin-bottom: 18px;   /* separa el pie de foto del texto que sigue */
+    }
+}
+
+/* =================================================
+   PÁGINAS DE OBRAS (WORKS): disposición común
+   Ordenador:  volver | primera imagen + resto de imágenes | texto | texto
+   Móvil:      volver / primera imagen / texto / resto de imágenes
+   ================================================= */
+
+table.obra,
+table.obra > tbody {
+    display: block;
+    width: 100% !important;
+    max-width: 1240px;
+    border-spacing: 0;
+    float: none !important;
+    margin: 0;
+}
+
+table.obra > tbody > tr {
+    display: grid !important;
+    grid-template-columns: 20px minmax(300px, 640px);
+    grid-auto-columns: minmax(160px, 220px);
+    grid-template-rows: auto 1fr;     /* la fila de la primera imagen se ajusta a ella */
+    column-gap: 32px;
+    align-items: start;
+    padding: 10px;
+}
+
+table.obra > tbody > tr > td {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0;
+    text-align: left !important;
+}
+
+table.obra .o-volver  { grid-column: 1; grid-row: 1 / span 2; }
+table.obra .o-primera { grid-column: 2; grid-row: 1; }
+table.obra .o-resto   { grid-column: 2; grid-row: 2; margin-top: 16px; }
+table.obra .o-texto   { grid-row: 1 / span 2; }
+table.obra > tbody > tr > td.o-vacio { display: none !important; }
+
+/* Imágenes: siempre al ancho de su columna, con el mismo espacio entre ellas */
+table.obra .o-imgs img {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin-bottom: 16px;
+}
+table.obra .o-imgs img + br,
+table.obra .o-imgs img + br + br {
+    display: none;
+}
+table.obra .o-imgs img:last-child {
+    margin-bottom: 0;
+}
+
+/* Vídeos en bucle dentro de la columna de imágenes */
+table.obra .o-imgs video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Rejilla de fotos en dos columnas (The Box) */
+table.obra .o-rejilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+table.obra .o-rejilla img {
+    margin: 0;
+}
+
+/* Textos de obra: mismo tamaño en todas las páginas */
+table.obra .o-texto,
+table.obra .o-texto *,
+table.obra .o-imgs span {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    table.obra > tbody > tr {
+        display: flex !important;
+        flex-direction: column;
+        gap: 22px;
+        padding: 4px 2px;
+    }
+    table.obra > tbody > tr > td {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    table.obra .o-volver  { order: 0; }
+    table.obra .o-primera { order: 1; }
+    table.obra .o-texto   { order: 2; }
+    table.obra .o-resto   { order: 3; }
+}
+
+/* =================================================
+   INDEX: vídeo de cabecera
+   ================================================= */
+
+#indice tr > td:nth-child(1) video {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+}
+
+/* =================================================
+   IMÁGENES «IMPRESAS» EN EL PAPEL
+   Los blancos toman el tono del fondo y dejan ver el grano;
+   un poco menos de contraste y color, como tinta absorbida.
+   ================================================= */
+
+table.obra .o-imgs img,
+table.obra .o-imgs video,
+#indice tr > td:nth-child(1) video,
+.pagina-bio img:not([src*="return.png"]) {
+    mix-blend-mode: multiply;
+    opacity: 0.92;
+    filter: contrast(0.94) saturate(0.88);
+}
+
+/* Años de la columna SHOWS (y su ETC.): mismo aire antes y después */
+#indice .anio {
+    margin: 42px 0 28px 0;
 }
