@@ -435,3 +435,22 @@ table.obra .o-imgs video,
 #indice .anio {
     margin: 42px 0 28px 0;
 }
+
+/* Portadas de libro: más pequeñas que las fotos de obra */
+table.obra .o-imgs img.libro {
+    width: auto !important;
+    max-width: min(100%, 440px) !important;
+}
+/* En las páginas de libro, la columna de imagen se ajusta a la portada */
+table.obra.con-libro > tbody > tr {
+    grid-template-columns: 20px minmax(260px, 440px);
+}
+
+/* Vídeos incrustados (Vimeo) en la columna de imágenes */
+table.obra .o-imgs iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
